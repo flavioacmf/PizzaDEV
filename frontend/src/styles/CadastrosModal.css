@@ -1,0 +1,70 @@
+/* Fundo escuro que cobre a tela */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Certifica-se de que o modal está acima de tudo */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #ffe4e1; /* Fundo rosado */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Botões das opções */
+.cadastros-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cadastro-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f7c600; /* Amarelo */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cadastro-button:hover {
+    background-color: #ffcc00; /* Amarelo mais claro */
+}
+
+/* Botão de fechar */
+.close-button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ff0000; /* Vermelho */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #d00000; /* Vermelho mais escuro */
+}
+ 

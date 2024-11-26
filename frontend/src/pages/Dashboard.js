@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import CadastrosModal from '../components/CadastrosModal'; // Importa o modal
+import '../styles/Dashboard.css'; // Importa os estilos atualizados
 
 const Dashboard = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false); // Estado para controlar o modal
     const navigate = useNavigate();
 
     const handleLogout = () => {
@@ -10,18 +13,30 @@ const Dashboard = () => {
     };
 
     return (
-        <div>
-            <h1>Dashboard</h1>
-            <p>Bem-vindo ao painel de administração!</p>
-            <div>
-                <button onClick={() => navigate('/clientes')}>Gerenciar Clientes</button>
-                <button onClick={() => navigate('/categorias')}>Gerenciar Categorias</button>
-                <button onClick={() => navigate('/produtos')}>Gerenciar Produtos</button>
-                <button onClick={() => navigate('/pedidos')}>Gerenciar Pedidos</button>
+        <div className="dashboard">
+            {/* Menu lateral */}
+            <div className="sidebar">
+                <button className="menu-item" onClick={() => setIsModalOpen(true)}>Cadastros</button>
+                <button className="menu-item" onClick={() => navigate('/pedidos')}>Pedidos</button>
+                <button className="menu-item" onClick={() => navigate('/docs-fiscais')}>Docs. Fiscais</button>
+                <button className="menu-item" onClick={() => navigate('/relatorios')}>Relatórios</button>
+                <button className="menu-item" onClick={() => navigate('/configuracoes')}>Configurações</button>
+                <button className="menu-item" onClick={() => navigate('/suporte')}>Suporte</button>
+
+                {/* Botão de logout no final */}
+                <button className="menu-item logout-button" onClick={handleLogout}>Sair</button>
             </div>
-            <button onClick={handleLogout} style={{ marginTop: '20px', color: 'red' }}>
-                Sair
-            </button>
+
+            {/* Conteúdo principal */}
+            <div className="main-content">
+                <div className="logo">
+                    <img src="/pizza_logo.png" alt="Pizza Dev" className="logo-image" />
+                    <div className="splashes"></div>
+                </div>
+            </div>
+
+            {/* Modal de Cadastros */}
+            {isModalOpen && <CadastrosModal onClose={() => setIsModalOpen(false)} />}
         </div>
     );
 };

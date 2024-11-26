@@ -1,0 +1,37 @@
+.cadastros-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Preenche toda a altura da tela */
+    background-color: #ffe4e1; /* Fundo rosado */
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.cadastros-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.cadastro-button {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #f7c600; /* Amarelo */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cadastro-button:hover {
+    background-color: #ffcc00; /* Amarelo mais claro ao passar o mouse */
+}

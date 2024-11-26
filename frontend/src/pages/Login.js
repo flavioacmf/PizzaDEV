@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import api from '../services/api';
 import { useNavigate } from 'react-router-dom';
+import '../styles/Login.css'; 
 
 const Login = () => {
     const [nome, setNome] = useState('');
@@ -20,26 +21,35 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <h1>Login</h1>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            <form onSubmit={handleLogin}>
-                <input
-                    type="text"
-                    placeholder="Nome de usuário"
-                    value={nome}
-                    onChange={(e) => setNome(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="Senha"
-                    value={senha}
-                    onChange={(e) => setSenha(e.target.value)}
-                />
-                <button type="submit">Entrar</button>
-            </form>
+        <div className="login-container">
+            <div className="left">
+                <img src="/pizza_logo2.png" alt="Pizza Dev" />
+                <h1>Login</h1>
+            </div>
+            <div className="right">
+                <div className="input-field">
+                    <input
+                        type="text"
+                        placeholder="Usuário"
+                        value={nome}
+                        onChange={(e) => setNome(e.target.value)}
+                    />
+                </div>
+                <div className="input-field">
+                    <input
+                        type="password"
+                        placeholder="Senha"
+                        value={senha}
+                        onChange={(e) => setSenha(e.target.value)}
+                    />
+                </div>
+                <button className="login-button" onClick={handleLogin}>
+                    Entrar
+                </button>
+            </div>
         </div>
     );
 };
 
 export default Login;
+	

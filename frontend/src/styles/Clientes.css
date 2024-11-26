@@ -1,0 +1,67 @@
+.clientes-container {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-button {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
+
+.clientes-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.clientes-table th, .clientes-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.clientes-table th {
+    background-color: #f2f2f2;
+}
+
+.clientes-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.clientes-table button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clientes-table button:first-of-type {
+    background-color: #007bff;
+    color: white;
+}
+
+.clientes-table button:first-of-type:hover {
+    background-color: #0056b3;
+}
+
+.clientes-table button:last-of-type {
+    background-color: #dc3545;
+    color: white;
+}
+
+.clientes-table button:last-of-type:hover {
+    background-color: #c82333;
+}

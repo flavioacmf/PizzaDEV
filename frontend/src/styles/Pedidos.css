@@ -1,0 +1,62 @@
+.pedidos-container {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pedidos-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pedidos-table th, .pedidos-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.pedidos-table th {
+    background-color: #f2f2f2;
+}
+
+.pedidos-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pedidos-table button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pedidos-table button:first-of-type {
+    background-color: #007bff;
+    color: white;
+}
+
+.pedidos-table button:first-of-type:hover {
+    background-color: #0056b3;
+}
+
+.pedidos-table button:nth-of-type(2) {
+    background-color: #28a745;
+    color: white;
+}
+
+.pedidos-table button:nth-of-type(2):hover {
+    background-color: #218838;
+}
+
+.pedidos-table button:last-of-type {
+    background-color: #dc3545;
+    color: white;
+}
+
+.pedidos-table button:last-of-type:hover {
+    background-color: #c82333;
+}

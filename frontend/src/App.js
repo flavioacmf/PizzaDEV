@@ -3,6 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
+import Clientes from './pages/Clientes';
+import Categorias from './pages/Categorias';
+import Produtos from './pages/Produtos';
+import Pedidos from './pages/Pedidos';
+import Cadastros from './pages/Cadastros';
 
 const App = () => {
     return (
@@ -18,10 +23,18 @@ const App = () => {
                     }
                 />
                 <Route
+                    path="/cadastros"
+                    element={
+                        <ProtectedRoute>
+                             <Cadastros />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
                     path="/clientes"
                     element={
                         <ProtectedRoute>
-                            <h1>Gerenciar Clientes</h1>
+                            <Clientes />
                         </ProtectedRoute>
                     }
                 />
@@ -29,7 +42,7 @@ const App = () => {
                     path="/categorias"
                     element={
                         <ProtectedRoute>
-                            <h1>Gerenciar Categorias</h1>
+                            <Categorias />
                         </ProtectedRoute>
                     }
                 />
@@ -37,7 +50,7 @@ const App = () => {
                     path="/produtos"
                     element={
                         <ProtectedRoute>
-                            <h1>Gerenciar Produtos</h1>
+                            <Produtos />
                         </ProtectedRoute>
                     }
                 />
@@ -45,7 +58,7 @@ const App = () => {
                     path="/pedidos"
                     element={
                         <ProtectedRoute>
-                            <h1>Gerenciar Pedidos</h1>
+                            <Pedidos />
                         </ProtectedRoute>
                     }
                 />
